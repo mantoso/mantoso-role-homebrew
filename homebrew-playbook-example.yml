@@ -12,30 +12,13 @@
     homebrew_upgrade_all_packages: yes
     ansible_python_interpreter: "/usr/bin/python3"
 
-    homebrew_cask_apps_user:
-      - appcleaner
-      - firefox
-      - font-jetbrains-mono
-        # - font-meslo-nerd-font
-      - font-microsoft-office
-      - font-zilla-slab
-        # - font-sourcecodepro-nerd-font
-        # - font-sourcecodepro-nerd-font-mono
-      - google-chrome
-      - imagealpha
-      - imageoptim
-      - iina
-      - microsoft-edge-dev
-      - microsoft-teams
-      - powershell
-        # - pycharm
-      - slack
-      - transmit
-      - transmit-disk
-      - vagrant
-      - vagrant-manager
-      - vlc
-      - the-unarchiver
+    homebrew_taps_user:
+      - colindean/fonts-nonfree     # font-microsoft-office
+      - homebrew/cask-fonts
+      - homebrew/cask-versions      # microsoft-edge-dev
+      - homebrew/services
+      - mantoso/tap
+      - xen0l/homebrew-taps         # aws-gate
 
     homebrew_installed_packages_user:
       - autoconf
@@ -53,6 +36,7 @@
       - gawk
       - gitup
       - git
+      - gnupg
       - graphviz
       - grc
       - hugo
@@ -62,6 +46,7 @@
       - mr
       - node
       - packer
+      - pinentry-mac
       - pre-commit
       - pyenv
       - pyenv-virtualenv
@@ -81,16 +66,35 @@
       - wget
       - yarn
 
-    homebrew_taps_user:
-      - colindean/fonts-nonfree     # font-microsoft-office
-      - homebrew/cask-fonts
-      - homebrew/cask-versions  # microsoft-edge-dev
-      - homebrew/services
-      - mantoso/tap
-      - xen0l/homebrew-taps         # aws-gate
-
     homebrew_uninstalled_packages_user:
       - python@2
+
+    homebrew_cask_apps_user:
+      - appcleaner
+      - firefox
+      - font-jetbrains-mono
+        # - font-meslo-nerd-font
+      - font-microsoft-office
+      - font-zilla-slab
+      - font-saucecodepro-nerd-font
+      - google-chrome
+      - imagealpha
+      - imageoptim
+      - microsoft-edge-dev
+      - microsoft-teams
+      - onedrive
+      - powershell
+      - pycharm
+      - slack
+      - transmit
+      - transmit-disk
+      - vagrant
+      - vagrant-manager
+      - vlc
+      - the-unarchiver
+
+    homebrew_cask_uninstalled_packages_user:
+      - keybase
 
   roles:
     - mantoso-role-homebrew
