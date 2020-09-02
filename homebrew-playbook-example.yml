@@ -42,6 +42,7 @@
       - hugo
       - ipv6calc
       - ipcalc
+      - libdvdcss
       - jq
       - mr
       - node
@@ -80,6 +81,7 @@
       - google-chrome
       - imagealpha
       - imageoptim
+      - handbrake
       - microsoft-edge-dev
       - microsoft-teams
       - onedrive
